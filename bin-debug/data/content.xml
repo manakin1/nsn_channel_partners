@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+	
+	<!-- 
+		The content structure for Nokia Siemens Network Channel Partner Program
+		@author Eve Andersson /zakour 2009
+	-->
+	
+	<!-- UI TEXTS -->
+		
+	<texts>
+		<text id="header_link">
+			<![CDATA[
+				<p class='info'><b>(see the plan)</b></p>
+			]]>	
+		</text>
+	</texts>
+	
+	<!-- IMAGES -->
+		
+	<!-- 
+		Preloaded images
+	-->
+		
+	<images>
+		<image id="six_steps" src="data/images/six_steps.png" />
+		<image id="graph4" src="data/images/graph4.png" />
+	</images>
+
+	<!-- PAGES -->
+		
+	<pages>
+		
+		<!-- CATEGORIES -->
+			
+		<!-- 
+			A category contains a set of navigable pages (single pages don't belong in any category). The header
+			shows on the top of the page above the navigation.
+			
+			@param name This shows in the Jukepod menu in the first view
+			@param action The label on the submit button on the last page of the category
+			@param info The info text that shows on mouseover in the first view
+		-->	
+				
+		<category id="0" name="Marketing plan" action="Save & send" info="The six-step marketing plan is a breeze to create. And a straightforward recipe for success.">
+			<header>
+				<text>
+					<![CDATA[
+						<p class='header_light'><b>Six steps to a marketing plan</b></p>
+					]]>
+				</text>
+			</header>
+			
+			<!-- PAGE 1 -->
+				
+			<!-- 
+				The pages are templates that extend com.nsn.channel.view.pages.Page and define how the
+				items will be laid out.
+				
+				@param template The template file. These are located under com.nsn.channel.view.pages
+				@param name The name of the page
+			-->
+			
+			<page id="0" template="SplitPage" name="1. Current business">
+				<title><![CDATA[<h3>Current perception & desired state</h3>]]></title>
+				
+				<!-- COLUMNS -->
+					
+				<!-- 
+					Columns are item containers used in the SplitPage and ColumnPage templates. The info text, if
+					specified, will be shown in the info popup. The tooltip button will be displayed next to the
+					column header.
+					
+					@param x Overrides the x position of the column (relative to the default x position)
+					@param y Overrides the y position of the column (relative to the default y position)
+				-->
+				
+				<column id="0">
+					<title><![CDATA[<p class='header'><b>Describe your business</b></p>]]></title>
+					<info>
+						<![CDATA[
+							<p>The current status is where building your plan starts from. Your actions need to be based
+							on the situation your bsiness currently finds itself in. You can describe shortly your key
+							markets and what your situation is related to the market, how you see the next 12 months and
+							any relevant facts regarding your business or the market. Because a good plan is based on
+							learnings from the past, it would also be good to very briefly summarize the key business
+							developments of the past 12 months. For a well rounded plan, a brief statement over perceived
+							opportunities and threats is also necessary.</p>
+						]]>
+					</info>
+				</column>
+				
+				<column id="1" />
+				
+				<separator id="0" x="405" />
+				
+				<!-- ITEMS -->
+					
+				<!--
+					Different types of forms and other UI elements. These all extend com.nsn.channel.view.forms.Form.
+					
+					@param type The form template
+					@param label The item's label text
+					@param column Specifies which column the item belongs in, provided that the page has columns
+					@param required Specifies whether this is a required field
+					@param width Overrides the width of the item
+					@param height Overrides the height of the item
+					@param default Default value
+				-->
+					
+				<item id="0" type="TextForm" label="Name of your company" column="0" required="true" />
+				<item id="1" type="TextForm" label="Your email (for delivering the final plan)" column="0" required="true" />
+				<item id="2" type="NumberForm" label="Net sales (turnover) for the last 12 months" column="0" required="true" default="&#8364;" />
+				<item id="3" type="TextArea" label="Current business status" column="0" >
+					<info>
+						<![CDATA[
+							<p>The current status is where building your plan starts from. Your actions need to be based
+							on the situation your bsiness currently finds itself in. You can describe shortly your key
+							markets and what your situation is related to the market, how you see the next 12 months and
+							any relevant facts regarding your business or the market. Because a good plan is based on
+							learnings from the past, it would also be good to very briefly summarize the key business
+							developments of the past 12 months. For a well rounded plan, a brief statement over perceived
+							opportunities and threats is also necessary.</p>
+						]]>	
+					</info>
+				</item>
+				
+				<item id="4" type="DataCollectionComponent" label="Competition" max_length="4" column="1" required="true">
+					<title>
+						<![CDATA[
+							<p class='header'><b>Detail your competition (up to four)</b></p>
+						]]>
+					</title>
+					
+					<components>
+						<item id="0" type="TextForm" label="Name of competitor" />
+						<item id="1" type="NumberForm" label="Market share" width="100" default="%" />
+						<item id="2" type="TextArea" label="What actions do you expect your competitor to execute in the next 12 months"/>
+						
+						<add_text><![CDATA[<p>Add competitor</p>]]></add_text>
+					</components>
+				</item>
+			</page>
+			
+			<!-- PAGE 2 -->
+				
+			<page id="1" template="ColumnPage" name="2. Market info">	
+				<title><![CDATA[<h3>Addressable market information</h3>]]></title>
+				
+				<!-- HEADER -->
+					
+				<header>
+					<text><![CDATA[<p class='header'><b>Identify key markets that you operate in</b></p>]]></text>
+					<info>
+						<![CDATA[
+							<p>A crucial part of marketing planning is knowing your markets. To be successful, you need to focus most
+							of your efforts on a limited number (around three, maximum five key market sub-segments). The key information
+							to list each market sub-segment is the total size in Euros of the sub-segment as well as your share of the
+							market and how big a share of the market is made out of Nokia Siemens Networks equipment.
+							<br/><br/>
+							After you have listed these, think about the potential market share for NSN equipment and what actions you
+							think would help us together reach this potential. (e.g. if the current share is at 25% and the potential at
+							35% you most likely have in mind what actions can help us together to cover that gap).
+							</p>
+						]]>	
+					</info>
+				</header>
+				
+				<!-- COLUMNS -->
+					
+				<column id="0">
+					<title><![CDATA[<p class='small'>Market sub-segment</p>]]></title>
+				</column>
+				
+				<column id="1">
+					<title><![CDATA[<p class='small'>Size of the sub-segment</p>]]></title>
+				</column>
+				
+				<column id="2">
+					<title><![CDATA[<p class='small'>Your share of the sub-segment</p>]]></title>
+				</column>
+				
+				<column id="3">
+					<title><![CDATA[<p class='small'>Your annual growth rate in the market (CAGR)</p>]]></title>
+				</column>
+				
+				<column id="4">
+					<title><![CDATA[<p class='small'>Current NSN equipment's share of the sub-segment</p>]]></title>
+				</column>
+				
+				<column id="5">
+					<title><![CDATA[<p class='small'>Potential NSN equipment's share of the sub-segment</p>]]></title>
+				</column>
+				
+				<column id="6">
+					<title><![CDATA[<p class='small'>What actions would help us together reach the potential share of the sub-segment</p>]]></title>
+				</column>
+				
+				<!-- ITEMS -->
+				
+				<item id="0" type="DropDownMenu" data="sub-segments" column="0" />
+				<item id="1" type="DropDownMenu" data="sub-segments" column="0" />
+				<item id="2" type="DropDownMenu" data="sub-segments" column="0" />
+				<item id="3" type="DropDownMenu" data="sub-segments" column="0" />
+				<item id="4" type="DropDownMenu" data="sub-segments" column="0" />
+				<item id="5" type="DropDownMenu" data="sub-segments" column="0" />
+				
+				<item id="6" type="NumberForm" column="1" width="75" default="&#8364;" />
+				<item id="7" type="NumberForm" column="1" width="75" default="&#8364;" />
+				<item id="8" type="NumberForm" column="1" width="75" default="&#8364;" />
+				<item id="9" type="NumberForm" column="1" width="75" default="&#8364;" />
+				<item id="10" type="NumberForm" column="1" width="75" default="&#8364;" />
+				<item id="11" type="NumberForm" column="1" width="75" default="&#8364;" />
+	
+				<item id="12" type="NumberForm" column="2" width="75" default="%" />
+				<item id="13" type="NumberForm" column="2" width="75" default="%" />
+				<item id="14" type="NumberForm" column="2" width="75" default="%" />
+				<item id="15" type="NumberForm" column="2" width="75" default="%" />
+				<item id="16" type="NumberForm" column="2" width="75" default="%" />
+				<item id="17" type="NumberForm" column="2" width="75" default="%" />
+				
+				<item id="18" type="NumberForm" column="3" width="75" default="%" />
+				<item id="19" type="NumberForm" column="3" width="75" default="%" />
+				<item id="20" type="NumberForm" column="3" width="75" default="%" />
+				<item id="21" type="NumberForm" column="3" width="75" default="%" />
+				<item id="22" type="NumberForm" column="3" width="75" default="%" />
+				<item id="23" type="NumberForm" column="3" width="75" default="%" />
+				
+				<item id="24" type="NumberForm" column="4" width="75" default="%" />
+				<item id="25" type="NumberForm" column="4" width="75" default="%" />
+				<item id="26" type="NumberForm" column="4" width="75" default="%" />
+				<item id="27" type="NumberForm" column="4" width="75" default="%" />
+				<item id="28" type="NumberForm" column="4" width="75" default="%" />
+				<item id="29" type="NumberForm" column="4" width="75" default="%" />
+								
+				<item id="30" type="NumberForm" column="5" width="75" default="%" />
+				<item id="31" type="NumberForm" column="5" width="75" default="%" />
+				<item id="32" type="NumberForm" column="5" width="75" default="%" />
+				<item id="33" type="NumberForm" column="5" width="75" default="%" />
+				<item id="34" type="NumberForm" column="5" width="75" default="%" />
+				<item id="35" type="NumberForm" column="5" width="75" default="%" />
+				
+				<item id="36" type="TextForm" width="180" column="6" />
+				<item id="37" type="TextForm" width="180" column="6" />
+				<item id="38" type="TextForm" width="180" column="6" />
+				<item id="39" type="TextForm" width="180" column="6" />
+				<item id="40" type="TextForm" width="180" column="6" />
+				<item id="41" type="TextForm" width="180" column="6" />
+			</page>
+			
+			<!-- PAGE 3 -->
+			
+			<page id="2" template="SplitPage" name="Your direction">	
+				<title><![CDATA[<h3>Your direction, revenue plan and future targets</h3>]]></title>
+				
+				<!-- COLUMNS -->
+					
+				<column id="0">
+					<title><![CDATA[<p class='header'><b>Describe your future direction</b></p>]]></title>
+				</column>
+				
+				<column id="1">
+					<title><![CDATA[<p class='header'><b>Key targets</b></p>]]></title>
+					<info>
+						<![CDATA[
+							<p>Identify key marketing (or business) targets for the next 12 months. Ideally, you should
+							have 3-5 distinct targets. Try to tie your targets to customers, revenue, sales, market share,
+							service experience, or the competition. Be as precise as you can and always set up monetary
+							or percentage targets such as 'increase amount of resellers by 10%' or 'become number two on
+							the market' or 'total sales €500 million'. You can also have more general targets such e.g.
+							'become opinion leader in the market'.</p>
+						]]>	
+					</info>
+				</column>
+				
+				<separator id="0" x="405" />
+				
+				<!-- ITEMS -->
+				
+				<item id="0" type="TextArea" label="Where is your business going in the next 12 months" height="80" column="0" required="true" default="">
+					<info>
+						<![CDATA[
+							<p>List here briefly where your business is going in the next 12 months. You can include
+							possible new directions, already known strategic decisions and other relevant facts that 
+							will have an impact on yoru company as a whole. If you see no change, it is important to
+							note that here as well.</p>
+						]]>	
+					</info>
+				</item>
+				<item id="1" type="NumberForm" label="Your net sales (turnover) target in 12 months" column="0" required="true" default="&#8364;" />
+				<item id="2" type="NumberForm" label="Overall business growth/shrinkage expectation" column="0" required="true" default="%" />
+				
+				<!-- CHANGE COMPONENT HERE -->
+				
+				
+				<item id="3" type="TextForm" label="Target #1" column="1" required="true"/>
+				<item id="4" type="TextForm" label="Target #2" column="1" />
+				<item id="5" type="TextForm" label="Target #3" column="1" />
+				<item id="6" type="TextForm" label="Target #4" column="1" />
+				<item id="7" type="TextForm" label="Target #5" column="1" />
+				
+			</page>
+			
+			<!-- PAGE 4 -->
+			
+			<page id="3" template="GraphPage" name="Priorities">	
+				<title><![CDATA[<h3>Prioritized action plan</h3>]]></title>
+				<title2><![CDATA[<p class='header'>Revenue importance</p>]]></title2>
+				<title3><![CDATA[<p class='header'>Strategic importance</p>]]></title3>
+				
+				<header>
+					<text><![CDATA[<p class='header'><b>Map your future actions according to their importance to revenue<br/>and overall business</b></p>]]></text>
+					<info>
+						<![CDATA[	
+							<p class='info'>Placing your future actions on the map helps you prioritize your actions and focus your
+							efforts and investments. The most important actions are found in the top right corner, which
+							represents actions that are highly important to both strategy and revenue.<br/><br/>
+							Click inside the matrix to the right to place your actions in their correct place. To remove 
+							an action, click on it again.</p>
+							
+						]]>
+					</info>
+				</header>
+				
+				<text>
+					<![CDATA[	
+						<p class='info'>Placing your future actions on the map helps you prioritize your actions and focus your
+						efforts and investments. The most important actions are found in the top right corner, which
+						represents actions that are highly important to both strategy and revenue.<br/><br/>
+						Click inside the matrix to the right to place your actions in their correct place. To remove 
+						an action, click on it again.</p>
+					]]>	
+				</text>
+				
+				<item id="0" type="Graph">
+					<info>
+						<![CDATA[
+							<p class='small'>Click on the map to place your target in the right place according to
+							its strategic & revenue relevance. After you click the target in place, you are asked to
+							label the target.<br/><br/>
+							Click inside the matrix to the right to place your actions in their correct place. To remove 
+							an action, click on it again.</p>
+						]]>
+					</info>
+				</item>
+			</page>
+			
+			<!-- PAGE 5 -->
+			
+			<page id="4" template="SplitPage" name="Levels">	
+				<title><![CDATA[<h3>Levels of marketing</h3>]]></title>
+				
+				<header>
+					<text>
+						<![CDATA[
+							<p class='header'><b>Map your future actions according to their importance to revenue and overall business</b></p>
+						]]>
+					</text>
+					
+					<info>
+						<![CDATA[
+							<p>When you map your marketing activities according to the part they play in the sales
+							process you ensure that no critical gaps remain. Ideally, your marketing must include steps
+							at each of the four levels from attention gaining to stimulating interest to creating desire
+							to creating direct action by the customer.
+							<br/><br/>
+							Analogous to a sales funnel, the activities in the first two levels, attention and interest,
+							are what put your company and solutions on prospective buyers' short-lists. The activities
+							of the last two levels, desire and action, are activities that turn the short-list placements
+							into sales.
+							<br/><br/>
+							Remember also to state what you expect from Nokia Siemens Networks as support for each step.
+							</p>
+						]]>	
+					</info>
+				</header>
+
+				<column id="0" />
+				<column id="1" x="370" gap="15" />
+				
+				<!-- ITEMS -->
+
+				<item id="0" type="Image" src="graph4" column="0" />
+				
+				<item id="1" type="TextForm" width="360" label="Marketing actions that create attention & awareness of you" column="1" required="true"/>
+				<item id="2" type="TextForm" width="360" label="Activities that stimulate deeper interest" column="1" required="true"/>
+				<item id="3" type="TextForm" width="360" label="Activities that create desire to buy from you" column="1" required="true"/>
+				<item id="4" type="TextForm" width="360" label="Activities that create direct customer action" column="1" required="true"/>
+			</page>
+			
+			<!-- PAGE 6 -->
+			
+			<page id="5" template="SplitPage" name="KPIs">
+				<title><![CDATA[<h3>Map your progress and success with KPIs</h3>]]></title>
+				
+				<header>
+					<text>
+						<!--
+						<![CDATA[
+							<p class='header'>Define Key Performance Indicators (KPIs) for your marketing activities as a whole</p>
+						]]>
+						-->
+					</text>
+					
+					<info>
+						<![CDATA[
+							<p>When thinking about KPIs and measurement methods, remember that the goals must be 
+							relevant to your organization and that you only measure what is quantifiable.<br/><br/>
+							Remember also that you can use your KPIs work not only as performance management tools, 
+							but also as carrots that can inspire your people to achieve more.</p>
+						]]>	
+					</info>
+				</header>
+				
+				<!-- COLUMNS -->
+					
+				<column id="0" />
+				<column id="1" x="380">
+					<title>
+						<![CDATA[
+							<p class='header'><b>Describe your Key Performance Indicator(s)</b></p>
+						]]>	
+					</title>	
+				</column>
+				
+				<separator id="0" x="365" />
+					
+				<!-- ITEMS -->
+					
+				<item id="0" type="TextBlock" column="0">
+					<text>
+						<![CDATA[
+							<p class='info'>
+							Marketing results must be followed, and your actions altered according to whether you are
+							reaching, exceeding or falling behind your plans. Think about 3-4 vital organizational
+							goals you must achieve in the next 12 months, how you measure success for each, and what
+							to do when you reach the target (as well as what to do if target is not reached).
+							</p>
+						]]>	
+					</text>
+				</item>
+				
+				<item id="1" type="TextForm" width="420" label="What do you aim to achieve" column="1" required="true" />
+				<item id="2" type="TextForm" width="420" label="How do you measure success. Be specific and use only numerical measures." column="1" required="true" />
+				<item id="3" type="TextForm" width="420" label="Define your success level and what to do after you have reached this level" column="1" required="true" />
+				<item id="4" type="TextForm" width="420" label="Define your critical level and what to do if your performance fails under this level" column="1" required="true" />
+				<item id="5" type="ButtonForm" button_label="Add KPIs" target="kpi_page" column="1" />
+			</page>
+		</category>
+		
+		<category id="1" name="Success stories" action="Save & submit story" info="Share your success stories, references and good news. They could be your next deal-maker.">
+			
+			<!-- PAGE 1 -->
+			
+			<page id="0" template="SplitPage">	
+				<title><![CDATA[<h3>Share your success story</h3>]]></title>
+				
+				<header>
+					<text>
+						<![CDATA[
+							<p class='header'><b>Success stories are often the proof that helps you close your next deal.
+							Have you got a successful reference to share, a good deal you have just closed? Please let us
+							in on the good news. We may even highlight your story in a larger case
+							study. So share your success with colleagues!</b></p>
+						]]>
+					</text>
+				</header>
+				
+				<column id="0">
+					<title><![CDATA[<p class='header'><b>Project details</b></p>]]></title>
+				</column>
+				
+				<column id="1">
+					<!--<title><![CDATA[<p class='header'>Success story</p>]]></title>-->
+				</column>
+				
+				<separator id="0" x="405" />
+				
+				<item id="0" type="TextForm" label="Name of the project" column="0" required="true"/>
+				<item id="1" type="DropDownMenu" width="150" data="sub-segments" label="Market sub-segment" column="0" required="true"/>
+				<item id="2" type="TextForm" width="150" label="Customer country" column="0" required="true"/>
+				<item id="3" type="TextForm" label="Customer web address" column="0" required="true"/>
+				<item id="4" type="TextForm" label="If additional partners were involved list them here" column="0" required="true"/>
+	
+				<item id="5" type="TextArea" height="40" label="Describe the project highlights and successes" column="1" required="true"/>
+				<item id="6" type="ButtonForm" button_label="Choose products" label="What Nokia Siemens products were used" target="product_page" column="1" required="true" />
+				<item id="7" type="DateForm" label="When was the project completed" column="1" required="true" />
+				<item id="8" type="CheckBoxForm" label="May we write a full success story or a case study about this project?" column="1" />
+				<item id="9" type="CheckBoxForm" label="Can we use this as a public reference?" column="1" />
+				<item id="10" type="TextForm" label="Your name" column="1" required="true" />
+				<item id="11" type="TextForm" label="Your email" column="1" required="true" />
+				
+			</page>	
+			
+			<!-- PAGE 2 -->
+			
+			<!--
+			<page id="1" template="SplitPage">	
+				<title><![CDATA[<h3>Share your success story</h3>]]></title>
+				
+				<column id="0" />
+				<column id="1" />
+				
+				<item id="0" type="TextForm" label="Is this a public reference" column="0" info="Info" required="true"/>
+				<item id="1" type="TextForm" label="Nokia Siemens Networks products used in the case" column="0" required="true"/>
+				<item id="2" type="TextForm" label="Who can give further information (name & email)" column="0" required="true"/>
+				<item id="3" type="TextForm" label="May we write a full success story or case study about this reference" column="0" required="true"/>
+					
+				<item id="4" type="TextForm" label="Value of the deal (&#8364;)" column="1" required="true"/>
+				<item id="5" type="TextForm" label="Date of the reference" column="1" required="true"/>
+				<item id="6" type="TextForm" label="Your company" column="1" required="true"/>
+				<item id="7" type="TextForm" label="Your name" column="1" required="true"/>
+				<item id="8" type="TextForm" label="Your email" column="1" required="true"/>
+			</page>	
+			-->
+				
+		</category>
+		
+		<!-- EXTRA PAGES -->
+			
+		<page id="six_steps" template="ImagePage" image="six_steps">
+			<title><![CDATA[<h3>Marketing plan</h3>]]></title>
+		</page>
+		
+		<page id="product_page" template="SplitPage" action="Done">
+			<title><![CDATA[<h3>Choose products</h3>]]></title>
+			
+			<column id="0" x="0" />
+			<column id="1" x="300" />
+			<column id="2" x="580" />
+			
+			<separator id="0" x="280" />
+			<separator id="1" x="560" />
+			
+			<item id="0" type="CheckBoxGroup" data="broadband_connectivity" column="0">
+				<title><![CDATA[<p class='header'><b>Broadband connectivity</b></p>]]></title>
+			</item>
+			
+			<item id="1" type="CheckBoxGroup" data="converged_core" column="1">
+				<title><![CDATA[<p class='header'><b>Converged core</b></p>]]></title>	
+			</item>
+			
+			<item id="2" type="CheckBoxGroup" data="business_support" column="1">
+				<title><![CDATA[<p class='header'><b>Business Support Systems</b></p>]]></title>		
+			</item>
+			
+			<item id="3" type="CheckBoxGroup" data="radio_access" column="2">
+				<title><![CDATA[<p class='header'><b>Radio Access</b></p>]]></title>		
+			</item>
+			
+			<item id="4" type="CheckBoxGroup" data="other" column="2">
+				<title></title>		
+			</item>
+		</page>
+		
+		<page id="kpi_page" template="GridPage" action="Done">
+			<title>
+				<text>
+					<![CDATA[<h3>Add KPIs</h3>]]>	
+				</text>
+				<!--
+				<info>
+					<![CDATA[<h3>Add KPIs</h3>]]>		
+				</info>
+				-->
+			</title>
+			
+			<column id="0">
+				<title>
+					<![CDATA[
+						<p class='header'><b>#2</b></p>
+					]]>
+				</title>
+			</column>
+			
+			<column id="1" x="405">
+				<title>
+					<![CDATA[
+						<p class='header'><b>#3</b></p>
+					]]>
+				</title>
+			</column>
+			
+			<column id="2" y="300">
+				<title>
+					<![CDATA[
+						<p class='header'><b>#4</b></p>
+					]]>
+				</title>	
+			</column>>
+				
+			<column id="3" x="405" y="300">
+				<title>
+					<![CDATA[
+						<p class='header'><b>#5</b></p>
+					]]>
+				</title>	
+			</column>
+				
+			<separator id="0" x="390" />
+			
+			<item id="0" type="TextForm" height="20" label="What do you aim to achieve" column="0" />
+			<item id="1" type="TextForm" height="20" label="How do you measure success. Be specific and use only numerical measures" column="0" />
+			<item id="2" type="TextForm" height="20" label="Define your success level and what to do after you have reached this level" column="0" />
+			<item id="3" type="TextForm" height="20" label="Define your critical level and what to do if your performance falls under this level" column="0" />
+			
+			<item id="4" type="TextForm" height="20" label="What do you aim to achieve" column="1" />
+			<item id="5" type="TextForm" height="20" label="How do you measure success. Be specific and use only numerical measures" column="1" />
+			<item id="6" type="TextForm" height="20" label="Define your success level and what to do after you have reached this level" column="1" />
+			<item id="7" type="TextForm" height="20" label="Define your critical level and what to do if your performance falls under this level" column="1" />
+			
+			<item id="8" type="TextForm" height="20" label="What do you aim to achieve" column="2" />
+			<item id="9" type="TextForm" height="20" label="How do you measure success. Be specific and use only numerical measures" column="2" />
+			<item id="10" type="TextForm" height="20" label="Define your success level and what to do after you have reached this level" column="2" />
+			<item id="11" type="TextForm" height="20" label="Define your critical level and what to do if your performance falls under this level" column="2" />
+			
+			<item id="12" type="TextForm" height="20" label="What do you aim to achieve" column="3" />
+			<item id="13" type="TextForm" height="20" label="How do you measure success. Be specific and use only numerical measures" column="3" />
+			<item id="14" type="TextForm" height="20" label="Define your success level and what to do after you have reached this level" column="3" />
+			<item id="15" type="TextForm" height="20" label="Define your critical level and what to do if your performance falls under this level" column="3" />
+			
+		</page>
+		
+	</pages>
+	
+	<menus>
+		<menu id="sub-segments">
+			<item id="0" label="power" />
+			<item id="1" label="oil & gas" />
+			<item id="2" label="pipelines" />
+			<item id="3" label="mining" />
+			<item id="4" label="water" />
+			<item id="5" label="metal" />
+			<item id="6" label="metro/underground" />
+			<item id="7" label="rail" />
+			<item id="8" label="airports" />
+			<item id="9" label="harbors" />
+			<item id="10" label="intelligent highways" />
+			<item id="11" label="public security" />
+			<item id="12" label="border control" />
+			<item id="13" label="research & education" />
+			<item id="14" label="governmental organizations" />
+			<item id="15" label="ministries" />
+			<item id="16" label="healthcare" />
+			<item id="17" label="finance" />
+			<item id="18" label="corporate business" />
+			<item id="19" label="media & entertainment" />
+		</menu>
+		
+		<menu id="countries">
+			<item id="0" label="Afghanistan" />
+			<item id="1" label="Albania" />
+			<item id="2" label="Algeria" />
+			<item id="3" label="Andorra" />
+			<item id="4" label="Angola" />
+			<item id="5" label="Anguilla" />
+		</menu>
+		
+		<menu id="broadband_connectivity">
+			<item id="0" label="Access switches" />
+			<item id="1" label="Carrier switches" />
+			<item id="2" label="DSLAM" />
+			<item id="3" label="DWDM" />
+			<item id="4" label="IP connectivity" />
+			<item id="5" label="Microwave" />
+			<item id="6" label="Narrowband/Multiservice solutions" />
+			<item id="7" label="NGN Metro" />
+			<item id="8" label="ResIP" />
+		</menu>
+		
+		<menu id="converged_core">
+			<item id="0" label="Consumer and business VoIP" />
+			<item id="1" label="Fixed-mobile convergence" />
+			<item id="2" label="IMS" />
+			<item id="3" label="Rich Communication Suite" />
+			<item id="4" label="Perfect voice fixed" />
+			<item id="5" label="Fixed Switching" />
+			<item id="6" label="Intelligent Packet core" />
+			<item id="7" label="Mobile internet connectivity" />
+			<item id="8" label="Mobile softswitching" />
+			<item id="9" label="Mobile switching" />
+			<item id="10" label="Subscriber management evolution" />
+			<item id="11" label="Subscriber data management" />
+		</menu>
+		
+		<menu id="business_support">
+			<item id="0" label="charge@once business" />
+			<item id="1" label="charge@once unified" />
+			<item id="2" label="charge@once mediate" />
+			<item id="3" label="Network Management OSS" />
+			<item id="4" label="OSS connectivity management" />
+			<item id="5" label="Share - Technical Support Portal" />
+		</menu>
+		
+		<menu id="radio_access">
+			<item id="0" label="Flexi BTS" />
+			<item id="1" label="GSM/EDGE" />
+			<item id="2" label="LTE" />
+			<item id="3" label="Mobile broadband solution" />
+			<item id="4" label="Village connection solution" />
+			<item id="5" label="WCDMA frequency refarming solution" />
+			<item id="6" label="WCDMA/HSPA/I-HSPA" />
+			<item id="7" label="WiMax" />
+		</menu>
+		
+		<menu id="other">
+			<item id="0" label="Other" />	
+		</menu>
+	</menus>
+	
+	<recipients>
+		<recipient address="andrew.burrell@nsn.com" />
+		<recipient address="sari.kivinen@nsn.com" />
+	</recipients>
+
+</content>

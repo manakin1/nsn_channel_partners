@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/151/trunk/AlivePDF/src/main/flex/org/alivepdf/images
+END
+PDFImage.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/151/trunk/AlivePDF/src/main/flex/org/alivepdf/images/PDFImage.as
+END
+ImageHeader.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/71/trunk/AlivePDF/src/main/flex/org/alivepdf/images/ImageHeader.as
+END
+ResizeMode.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/78/trunk/AlivePDF/src/main/flex/org/alivepdf/images/ResizeMode.as
+END
+GIFImage.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/images/GIFImage.as
+END
+JPEGImage.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/151/trunk/AlivePDF/src/main/flex/org/alivepdf/images/JPEGImage.as
+END
+PNGImage.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/images/PNGImage.as
+END
+IImage.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/images/IImage.as
+END
+ImageFormat.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/images/ImageFormat.as
+END

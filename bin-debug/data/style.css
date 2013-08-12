@@ -1,0 +1,65 @@
+h1
+{
+	font-family: "Arial" ;
+	font-size: 50 ;
+	color: #fe9904 ;
+}
+
+h2
+{
+	font-family: "Arial" ;
+	font-size: 22 ;
+	color: #727072 ;
+}
+
+h3
+{
+	font-family: "Arial" ;
+	font-size: 24 ;
+	font-weight: bold ;
+	color: #fe9904 ;
+}
+
+p
+{
+	font-family: "Arial" ;
+	font-size: 14 ;
+	color: #727072 ;
+}
+
+.header
+{
+	font-family: "Arial" ;
+	font-size: 13 ;
+	font-weight: bold ;
+	color: #000000 ;
+}
+
+.header_light
+{
+	font-family: "Arial" ;
+	font-size: 12 ;
+	font-weight: bold ;
+	color: #cccccc ;
+}
+
+.info
+{
+	font-family: "Arial" ;
+	font-size: 12 ;
+	color: #727072 ;
+}
+
+.small
+{
+	font-family: "Arial" ;
+	font-size: 11 ;
+	color: #727072 ;
+}
+
+.tooltip
+{
+	font-family: "Arial" ;
+	font-size: 10 ;
+	color: #000000 ;
+}

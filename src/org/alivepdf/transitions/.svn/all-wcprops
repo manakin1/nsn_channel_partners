@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/transitions
+END
+TransitionDirection.as
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/transitions/TransitionDirection.as
+END
+MotionDirection.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/transitions/MotionDirection.as
+END
+Dimension.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/transitions/Dimension.as
+END
+Transition.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/27/trunk/AlivePDF/src/main/flex/org/alivepdf/transitions/Transition.as
+END
